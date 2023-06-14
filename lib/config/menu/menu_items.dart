@@ -15,7 +15,7 @@ class MenuItem {
 
 }
 
-const appMenuItem = <MenuItem> [
+const appMenuItems = <MenuItem> [
 
   MenuItem(
     title: 'Botones',
@@ -26,8 +26,8 @@ const appMenuItem = <MenuItem> [
   MenuItem(
     title: 'Tarjetas',
     subTitle: 'Un contenedor estilizado',
-    link: '/card',
-    icon: Icons.credit_card_off_outlined,
+    link: '/cards',
+    icon: Icons.credit_card_outlined,
   ),
 
 ];
