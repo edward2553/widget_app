@@ -24,7 +24,7 @@ const appMenuItems = <MenuItem> [
 
   MenuItem(
     title: 'Botones',
-    name: 'buttons_screen',
+    name: ButtonsScreen.name,
     subTitle: 'Varios botones en flutter',
     link: '/buttons',
     icon: Icons.smart_button_outlined,
@@ -32,7 +32,7 @@ const appMenuItems = <MenuItem> [
   ),
   MenuItem(
     title: 'Tarjetas',
-    name: 'cards_screen',
+    name: CardsScreen.name,
     subTitle: 'Un contenedor estilizado',
     link: '/cards',
     icon: Icons.credit_card_outlined,
@@ -40,11 +40,42 @@ const appMenuItems = <MenuItem> [
   ),
   MenuItem(
     title: 'Progress Indicators',
-    name: 'Generales y controlados',
+    name: ProgressScreen.name,
     subTitle: 'Barras de progreso',
     link: '/progress',
     icon: Icons.refresh_rounded,
     widget: ProgressScreen(),
   ),
-
+  MenuItem(
+    title: 'Snackbars y dialogos',
+    name: SnackbarScreen.name,
+    subTitle: 'Indicadores en pantalla ',
+    link: '/snackbars',
+    icon: Icons.info_outline,
+    widget: SnackbarScreen(),
+  ),
+  MenuItem(
+    title: 'Animated container',
+    name: AnimatedScreen.name,
+    subTitle: 'Indicadores en Stateful widget animado',
+    link: '/animated',
+    icon: Icons.check_box_outline_blank_rounded,
+    widget: AnimatedScreen(),
+  ),
+  MenuItem(
+    title: 'UI controls + Tiles',
+    name: UiControlsScreen.name,
+    subTitle: 'Una serie de controles en flutters',
+    link: '/ui-controls',
+    icon: Icons.car_rental_outlined,
+    widget: UiControlsScreen(),
+  ),
+  MenuItem(
+    title: 'Introduccion a la aplicación',
+    name: AppTutorialScreen.name,
+    subTitle: 'Pequeño tutoria introductorio',
+    link: '/tutorial',
+    icon: Icons.accessible_rounded,
+    widget: AppTutorialScreen(),
+  ),
 ];
