@@ -78,4 +78,12 @@ const appMenuItems = <MenuItem> [
     icon: Icons.accessible_rounded,
     widget: AppTutorialScreen(),
   ),
+  MenuItem(
+    title: 'Infinite Scroll',
+    name: InfiniteScrollScreen.name,
+    subTitle: 'Listas infinitas y pull to refresh',
+    link: '/infinite',
+    icon: Icons.list_alt_outlined,
+    widget: InfiniteScrollScreen(),
+  ),
 ];
