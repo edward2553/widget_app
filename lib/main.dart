@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:widget_app/config/router/app_router.dart';
 import 'package:widget_app/config/theme/app_theme.dart';
+import 'package:widget_app/presentation/providers/theme_provider.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+    const ProviderScope(
+      child: MainApp(),
+    )
+  );
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends ConsumerWidget {
   const MainApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+
+    final int selectedColor = ref.watch(selectedIndexColorProvider);
+    final bool isLight = ref.watch(lightModeProvider);
+
     return MaterialApp.router(
       title: 'Flutter widgets',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 2).getTheme(),
+      theme: AppTheme(selectedColor: selectedColor, isLightMode: isLight).getTheme(),
       routerConfig: appRouter,
       // home: Scaffold(
       //   body: Center(

@@ -17,11 +17,9 @@ class MenuItem {
     required this.icon,
     required this.widget,
   });
-
 }
 
-const appMenuItems = <MenuItem> [
-
+const appMenuItems = <MenuItem>[
   MenuItem(
     title: 'Botones',
     name: ButtonsScreen.name,
@@ -85,5 +83,21 @@ const appMenuItems = <MenuItem> [
     link: '/infinite',
     icon: Icons.list_alt_outlined,
     widget: InfiniteScrollScreen(),
+  ),
+  MenuItem(
+    title: 'Counter',
+    name: CounterScreen.name,
+    subTitle: 'Una pantalla de contador breve',
+    link: '/counter',
+    icon: Icons.add_outlined,
+    widget: CounterScreen(),
+  ),
+  MenuItem(
+    title: 'Theme changer',
+    name: ThemeChangerScreen.name,
+    subTitle: 'Pantalla para cambiar el tema',
+    link: '/theme-changer',
+    icon: Icons.color_lens_outlined,
+    widget: ThemeChangerScreen(),
   ),
 ];

@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:widget_app/config/menu/menu_items.dart';
 import '../../presentation/screens/screens.dart';
 
-final apps = appMenuItems.map((menuItem) =>
+final screens = appMenuItems.map((menuItem) =>
       GoRoute(
         path: menuItem.link,
         name: menuItem.name,
@@ -44,7 +44,7 @@ final appRouter = GoRouter(
       name: HomeScreen.name,
       builder: (context, state) => const HomeScreen(),
     ),
-    ...apps,
+    ...screens,
   ]
     
 );
